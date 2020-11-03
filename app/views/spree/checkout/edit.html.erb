@@ -2,6 +2,7 @@
 
 <div id="checkout" data-hook>
   <%= render partial: 'spree/shared/error_messages', locals: { target: @order } %>
+  <%= render partial: 'spree/checkout/state_change', locals: { target: @order } %>
 
   <div class="row" data-hook="checkout_header">
     <div class="col-sm-3">
