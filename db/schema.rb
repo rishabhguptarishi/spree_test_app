@@ -1110,7 +1110,7 @@ ActiveRecord::Schema.define(version: 2020_11_05_100303) do
     t.datetime "updated_at", null: false
     t.datetime "discontinue_on"
     t.datetime "created_at", null: false
-    t.decimal "sale_price", precision: 8, scale: 2
+    t.decimal "sale_price", precision: 8, scale: 2, default: "0.0"
     t.index ["deleted_at"], name: "index_spree_variants_on_deleted_at"
     t.index ["discontinue_on"], name: "index_spree_variants_on_discontinue_on"
     t.index ["is_master"], name: "index_spree_variants_on_is_master"

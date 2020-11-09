@@ -1,5 +1,5 @@
 class AddSalePriceToSpreeVariant < ActiveRecord::Migration[5.2]
   def change
-    add_column :spree_variants, :sale_price, :decimal, precision: 8, scale: 2
+    add_column :spree_variants, :sale_price, :decimal, precision: 8, scale: 2, default: 0
   end
 end
