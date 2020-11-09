@@ -1,0 +1,11 @@
+<% if target && target.state_changes.any? %>
+  <div id="errorExplanation" class="alert alert-success" data-hook>
+    <% last_change = target.state_changes.last %>
+    <ul>
+      <li>Previous State: <%= last_change.previous_state %></li>
+      <li>Current State: <%= last_change.next_state %></li>
+      <li>Order Total: <%= target.total %></li>
+    </ul>
+     <br/>
+  </div>
+<% end %>
