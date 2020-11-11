@@ -1,7 +1,7 @@
 Spree::Variant.class_eval do
 
   validates :sale_price, presence: true
-  validates :sale_price, numericality: { less_than: :price }
+  validates :sale_price, numericality: { less_than: :price }, allow_blank: true
 
   def price_in(currency)
     Spree::Price.new(variant_id: self.id, amount: self.selling_price, currency: currency)
